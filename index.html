@@ -16,23 +16,33 @@
 
     <div id="login" class="form active">
       <h2>Welcome Back</h2>
-      <input type="text" placeholder="Username" required />
+      <input type="text" id="login-username" placeholder="Username" required />
       <div class="password-wrapper">
-        <input type="password" placeholder="Password" required />
+        <input type="password" id="login-password" placeholder="Password" required />
         <span class="toggle-password" onclick="togglePassword(this)">👁️</span>
       </div>
-      <button type="submit">Login</button>
+
+      <div class="form-extra">
+        <label class="remember-me">
+          <input type="checkbox" id="rememberMe" />
+          Remember Me
+        </label>
+        <a href="#" class="forgot-password" onclick="forgotPassword()">Forgot Password?</a>
+      </div>
+
+      <button onclick="redirectToHome()">Login</button>
     </div>
 
     <div id="signup" class="form">
       <h2>Create Account</h2>
-      <input type="text" placeholder="Username" required />
-      <input type="email" placeholder="Email" required />
+      <input type="text" id="signup-username" placeholder="Username" required />
+      <input type="email" id="signup-email" placeholder="Email" required />
       <div class="password-wrapper">
-        <input type="password" placeholder="Password" required />
+        <input type="password" id="signup-password" placeholder="Password" required />
         <span class="toggle-password" onclick="togglePassword(this)">👁️</span>
       </div>
-      <button type="submit">Sign Up</button>
+
+      <button onclick="redirectToHome()">Sign Up</button>
     </div>
   </div>
 
@@ -49,6 +59,18 @@
       input.type = input.type === 'password' ? 'text' : 'password';
       icon.textContent = input.type === 'password' ? '👁️' : '🙈';
     }
+
+    function redirectToHome() {
+      // For demo: simple redirect
+      window.location.href = "home.html";
+    }
+
+    function forgotPassword() {
+      alert("Redirecting to password recovery page...");
+      // Replace with actual redirect if needed
+      // window.location.href = "forgot-password.html";
+    }
   </script>
+
 </body>
 </html>
