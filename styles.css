@@ -1,31 +1,33 @@
 * {
   box-sizing: border-box;
   font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
 body {
-  background-color: #0d0d0d;
-  color: #f0f0f0;
+  background: #000;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 0;
+  background: linear-gradient(145deg, #0b0b0b, #1a1a1a);
 }
 
 .container {
-  width: 360px;
-  background-color: #1a1a1a;
-  border-radius: 16px;
+  width: 370px;
+  backdrop-filter: blur(20px);
+  background: rgba(20, 20, 20, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
   overflow: hidden;
+  transition: 0.3s;
 }
 
 .tabs {
   display: flex;
-  background: #121212;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .tabs button {
@@ -36,12 +38,13 @@ body {
   color: #aaa;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s, color 0.3s;
+  transition: 0.3s;
+  font-size: 15px;
 }
 
 .tabs button.active {
-  background: #2a2a2a;
-  color: #ffffff;
+  color: #4aa8ff;
+  border-bottom: 2px solid #4aa8ff;
 }
 
 .form {
@@ -63,41 +66,42 @@ body {
   text-align: center;
   margin-bottom: 22px;
   font-size: 22px;
+  font-weight: 600;
   color: #ffffff;
 }
 
 .form input {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 16px;
-  border-radius: 10px;
-  border: 1px solid #333;
-  background: #222;
+  padding: 12px 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #444;
+  background: transparent;
   color: #eee;
-  font-size: 14px;
+  font-size: 15px;
+  transition: border 0.3s;
 }
 
 .form input:focus {
   outline: none;
-  border-color: #3498db;
-  background: #2c2c2c;
+  border-bottom: 1px solid #4aa8ff;
 }
 
 .form button {
   width: 100%;
   padding: 12px;
-  background: #3498db;
-  color: #fff;
+  background: #4aa8ff;
+  color: white;
   border: none;
-  border-radius: 12px;
   font-size: 16px;
-  font-weight: 600;
+  border-radius: 10px;
   cursor: pointer;
+  font-weight: bold;
   transition: background 0.3s ease;
 }
 
 .form button:hover {
-  background: #2980b9;
+  background: #3594e0;
 }
 
 .password-wrapper {
@@ -105,15 +109,16 @@ body {
 }
 
 .password-wrapper input {
-  padding-right: 42px;
+  padding-right: 40px;
 }
 
 .toggle-password {
   position: absolute;
   top: 50%;
-  right: 14px;
+  right: 10px;
   transform: translateY(-50%);
   font-size: 16px;
   color: #888;
   cursor: pointer;
+  user-select: none;
 }
