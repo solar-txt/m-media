@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>m music - Player</title>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div id="app">
+
+    <aside class="sidebar">
+      <div class="logo">m</div>
+      <nav>
+        <button class="nav-btn active" data-section="home">Home</button>
+        <button class="nav-btn" data-section="playlists">Playlists</button>
+        <button class="nav-btn" data-section="profile">Profile</button>
+        <button class="nav-btn" data-section="upload">Become Artist</button>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <section id="home" class="section active">
+        <h1>Welcome to m music</h1>
+        <p>Listen to your favorite songs</p>
+      </section>
+      <section id="playlists" class="section">
+        <h1>Your Playlists</h1>
+        <p>(Your playlists will appear here)</p>
+      </section>
+      <section id="profile" class="section">
+        <h1>Your Profile</h1>
+        <p>(Customize your profile here)</p>
+      </section>
+      <section id="upload" class="section">
+        <h1>Become an Artist</h1>
+        <p>(Upload your albums & songs here)</p>
+      </section>
+    </main>
+
+    <footer class="player">
+      <div class="player-info">
+        <div class="song-title">No song playing</div>
+      </div>
+      <div class="player-controls">
+        <button id="prevBtn">⏮️</button>
+        <button id="playPauseBtn">▶️</button>
+        <button id="nextBtn">⏭️</button>
+      </div>
+    </footer>
+
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>
