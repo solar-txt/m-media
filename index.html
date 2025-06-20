@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
 
   <div class="container">
     <div class="tabs">
@@ -43,10 +42,6 @@
       document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
       document.getElementById(tabId).classList.add('active');
       event.target.classList.add('active');
-    }
-
-    function toggleTheme() {
-      document.body.classList.toggle('light');
     }
 
     function togglePassword(icon) {
