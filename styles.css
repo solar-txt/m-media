@@ -4,14 +4,13 @@
 }
 
 body {
-  background: #000;
+  background: linear-gradient(145deg, #0b0b0b, #1a1a1a);
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  background: linear-gradient(145deg, #0b0b0b, #1a1a1a);
 }
 
 .container {
@@ -121,4 +120,39 @@ body {
   color: #888;
   cursor: pointer;
   user-select: none;
+}
+
+/* New form-extra styles */
+
+.form-extra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.remember-me input {
+  margin-right: 6px;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.remember-me {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+
+.forgot-password {
+  color: #4aa8ff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.forgot-password:hover {
+  color: #1e73e8;
 }
