@@ -1,10 +1,11 @@
 * {
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background: #f2f2f2;
+  background: #0f0f0f;
+  color: #e0e0e0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,34 +14,39 @@ body {
 }
 
 .container {
-  width: 350px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 360px;
+  background: #1a1a1a;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
   overflow: hidden;
+  transition: 0.3s ease;
 }
 
 .tabs {
   display: flex;
+  background: #121212;
+  border-bottom: 1px solid #333;
 }
 
 .tabs button {
   flex: 1;
   padding: 14px;
   cursor: pointer;
-  background: #eee;
+  background: transparent;
   border: none;
-  font-weight: bold;
-  transition: background 0.3s;
+  color: #aaa;
+  font-weight: 600;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 0;
 }
 
 .tabs button.active {
-  background: #3498db;
+  background: #222;
   color: #fff;
 }
 
 .form {
-  padding: 20px;
+  padding: 24px;
   display: none;
 }
 
@@ -48,23 +54,41 @@ body {
   display: block;
 }
 
+.form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 22px;
+  color: #fff;
+}
+
 .form input {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 12px;
+  color: #eee;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.form input:focus {
+  border-color: #3498db;
+  outline: none;
+  background: #333;
 }
 
 .form button {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   background: #3498db;
   border: none;
   color: white;
   font-size: 16px;
-  border-radius: 6px;
+  border-radius: 14px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 .form button:hover {
